@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-cm
+  namespace: my-app-namespace
+data:
+  game.properties: |
+    APP_ENV="production"
+    APP_DEBUG="false"
+    OTHER_APP_CONF=""

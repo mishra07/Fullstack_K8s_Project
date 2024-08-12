@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deploy
+  namespace: my-app-namespace
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: my-backend-image:latest
+        resources:
+        requests:
+          memory: "64Mi"
+          cpu: "250m"
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 3000
+            httpHeaders:
+            - name: Custom-Header
+              value: Awesome
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 3000
+            httpHeaders:
+            - name: Custom-Header
+              value: Awesome
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        securityContext:
+          runAsUser: 1000
+        volumeMounts:
+        - name: cm
+          mountPath: "/etc/cm"
+          readOnly: true
+      imagePullSecrets:
+      - name: myregistrykey
+      volumes:
+      - name: cm
+        configMap:
+          name: backend-cm
+      env:
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-credentials
+              key: mongodb-username
+        - name: DB_PASS
+          valueFrom:
+            secretKeyRef:
+              name: mongodb-credentials
+              key: mongodb-password
