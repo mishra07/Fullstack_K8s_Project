@@ -1,5 +1,6 @@
 <h1>Phase 1</h1>
 <h2>Architectural Diagram</h2>
+
 ![Alt text](https://github.com/mishra07/Fullstack_K8s_Project/blob/master/Architecture_Diagram.png)
 <br>
 
