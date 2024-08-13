@@ -93,6 +93,7 @@ Access Grafana dashboard on the NodeIP with nodePort service port.
 (3) Check ingress configuration for frontend.<br>
 (4) Check network policies of frontend. If it is blocking any call to or from the pod.<br>
 (5) Use nslookup to resolve domain name. Check it is correct or not.<br>
+(6) Check the endpoints created by service are correct and match the desired pod IPs.<br>
 
 <h2>Troubleshooting DB/Backend</h2>
 (1) Check logs and events.<br>
@@ -100,6 +101,7 @@ Access Grafana dashboard on the NodeIP with nodePort service port.
 (3) Check the network policy for backend and db. If it is blocking any call to or from the pod.<br>
 (4) Check if rbac is configured to communicate with db via api-server.<br>
 (5) Use ping to check latency and packet-loss.<br>
+(6) Check the endpoints created by service are correct and match the desired pod IPs.<br>
 
 <h2>Troubleshooting RabbitMQ</h2>
 (1) Check logs and events.<br>
