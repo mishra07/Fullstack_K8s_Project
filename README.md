@@ -41,15 +41,18 @@
 (6) Created service account and rbac for role based access and to have limited permission.<br>
 (7) Configured security context for non-root user access.<br>
 
+<h2>OPA/Gatekeeper</h2>
+(1) 
 
 
 
 
+<h1>Phase 2</h1>
 
+<h2>Monitoring a Kubernetes Cluster using Prometheus and Grafana</h2>
 
-
-
-Monitoring a Kubernetes Cluster using Prometheus and Grafana
+-> 
+-> 
 
 Steps:
 (1) kubectl create namespace monitoring<br>
@@ -64,4 +67,38 @@ Steps:
 (10) kubectl expose service grafana --namespace monitoring --type=NodePort --target-port=3000 --name=grafana-ext<br>
 
 Access Grafana dashboard on the NodeIP with nodePort service port.
+
+<h2>Logging using EFK Stack</h2>
+(1) Created statefulset for ElasticSearch.<br>
+(2) Created headless service for elasticsearch for service discovery.<br>
+(3) Created deployment for kibana.<br>
+(4) Configured service as nodeport of access using clusterip.<br>
+(5) Created fluntd as daemonset to run on all the nodes.<br>
+(6) Configured service account and rbac for limited communication with api-server.<br>
+
+<h1>Phase 3</h1>
+
+<h2>Troubleshooting Frontend</h2>
+(1) Check logs and events.<br>
+(2) Verify service configuration of frontend service.<br>
+(3) Check ingress configuration for frontend.<br>
+(4) Check network policies of frontend. If it is blocking any call to or from the pod.<br>
+(5) Use nslookup to resolve domain name. Check it is correct or not.<br>
+
+<h2>Troubleshooting DB/Backend</h2>
+(1) Check logs and events.<br>
+(2) Verify service configuration of backend and db service.<br>
+(3) Check the network policy for backend and db. If it is blocking any call to or from the pod.<br>
+(4) Check if rbac is configured to communicate with db via api-server.<br>
+(5) Use ping to check latency and packet-loss.<br>
+
+<h2>Troubleshooting RabbitMQ</h2>
+(1) Check logs and events.<br>
+(2) Check metics of rabbitmq pod.<br>
+(3) Exec into the node and check rabbitmq service level configuration.<br>
+(4) Use ping to check latency and packet-loss.<br>
+
+
+
+
 
