@@ -1,31 +1,40 @@
 <h1>Phase 1</h1>
 
 <h2>Backend</h2>
-(1) Created deployment for backend in Node.js.
-(2) Configured clusterip service for backend for interpod communication.
-(3) Created HPA for backend depployment for autoscaling based on memory and cpu.
-(4) Created liveness and readiness probe for pod health check.
-(5) Created secret for registry to authenticate the iamge pull.
-(6) Cofigured secret for mongodb username and password.
-(7) Created network policy for backend deployment for pod security.
-(8) Created config map for environment variables.
-(9) Configured rolling update in deployment.
-(10) Configured resource and limits for resource management.
+(1) Created deployment for backend in Node.js.<br>
+(2) Configured clusterip service for backend for interpod communication.<br>
+(3) Created HPA for backend depployment for autoscaling based on memory and cpu.<br>
+(4) Created liveness and readiness probe for pod health check.<br>
+(5) Created secret for registry to authenticate the iamge pull.<br>
+(6) Cofigured secret for mongodb username and password.<br>
+(7) Created network policy for backend deployment for pod security.<br>
+(8) Created config map for environment variables.<br>
+(9) Configured rolling update in deployment.<br>
+(10) Configured resource and limits for resource management.<br>
 
 <h2>Frontend</h2>
-(1) Created deployment for frontend for angular.
-(2) Configured clusterip service for frontend deployment for interpod communication.
-(3) Created HPA for backend depployment for autoscaling based on memory and cpu.
-(4) Configured resource and limits for resource management.
-(5) Created secret for registry to authenticate the iamge pull.
-(6) Created liveness and readiness probe for pod port check.
-(7) Configured image pull policy only ifNotPresent.
-(8) Created ingress for exposing application to external world.
-(9) Creted tls secret for ssl cert of the domain.
-(10) Configured rolling update in deployment.
+(1) Created deployment for frontend for angular.<br>
+(2) Configured clusterip service for frontend deployment for interpod communication.<br>
+(3) Created HPA for backend depployment for autoscaling based on memory and cpu.<br>
+(4) Configured resource and limits for resource management.<br>
+(5) Created secret for registry to authenticate the iamge pull.<br>
+(6) Created liveness and readiness probe for pod port check.<br>
+(7) Configured image pull policy only ifNotPresent.<br>
+(8) Created ingress for exposing application to external world.<br>
+(9) Creted tls secret for ssl cert of the domain.<br>
+(10) Configured rolling update in deployment.<br>
 
 <h2>MongoDB</h2>
-(1) 
+(1) Created statefulset for mongodb database.<br>
+(2) Configured headless-service for service discovery.<br>
+(3) Configured side car container which is designed to manage and monitor the MongoDB replica set.<br>
+(4) Configured volumeClaimTemplate for data persistant.<br>
+(5) Created secret for mongodb username and password.<br>
+(6) Configured terminationGracePeriodSeconds for smooth creation of pod after termination.<br>
+
+<h2>RabbitMQ</h2>
+
+
 
 
 
