@@ -33,7 +33,7 @@ spec:
         image: cvallance/mongo-k8s-sidecar
         env:
           - name: MONGO_SIDECAR_POD_LABELS
-            value: "role=mongo,environment=test"
+            value: "app=mongodb"
           - name: MONGODB_USERNAME
             valueFrom:
               secretKeyRef:

@@ -6,7 +6,9 @@ metadata:
   labels:
     app: kibana
 spec:
+  type: LoadBalancer
   ports:
   - port: 5601
+    targetPort: 5601
   selector:
     app: kibana
