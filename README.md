@@ -1,6 +1,8 @@
 <h1>Phase 1</h1>
+
 ![Alt text](https://github.com/mishra07/Fullstack_K8s_Project/blob/master/Architecture_Diagram.png)
 <br>
+
 -> Created backend, frontend, DB and RabbitMQ.<br>
 -> Backend will communicate with MongoDB and RabbitMQ.<br>
 -> DB will used for storing user details, order details etc.<br>
