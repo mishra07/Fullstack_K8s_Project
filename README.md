@@ -5,6 +5,7 @@ Architectural Diagram -> ![K8s_Project](https://github.com/user-attachments/asse
 -> Backend will communicate with MongoDB and RabbitMQ.<br>
 -> DB will used for storing user details, order details etc.<br>
 -> RabbitMQ will be used for storing order status with asynchronous communication.<br>
+-> Frontend will communicate with backend.<br>
 -> Users will access frontend using domain name and path.<br>
 
 <h2>Backend</h2>
