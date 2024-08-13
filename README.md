@@ -1,6 +1,6 @@
 <h1>Phase 1</h1>
-Architectural Diagram -> ![K8s_Project](https://github.com/user-attachments/assets/36a8ac24-8380-4a86-9d24-3df3006b58ce)
-<br>
+Architectural Diagram -> 
+![Alt text](Architectural_Diagram.png)
 -> Created backend, frontend, DB and RabbitMQ.<br>
 -> Backend will communicate with MongoDB and RabbitMQ.<br>
 -> DB will used for storing user details, order details etc.<br>
