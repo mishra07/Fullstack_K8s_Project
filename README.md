@@ -58,7 +58,7 @@ Architectural Diagram -> ![K8s_Project](https://github.com/user-attachments/asse
 
 <h2>Monitoring a Kubernetes Cluster using Prometheus and Grafana</h2>
 
--> Used helm package manager to deploy prometheus and grafana.
+-> Used helm package manager to deploy prometheus and grafana.<br>
 -> Deployed prometheus as daemonset to ensure running on all the nodes.<br>
 -> Deployed prometheus-alertmanager as statefulset.<br>
 -> Deployed grafana as deployment and exposed as nodeport service.<br>
