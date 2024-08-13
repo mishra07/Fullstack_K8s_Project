@@ -1,4 +1,11 @@
 <h1>Phase 1</h1>
+![Architectural Diagram](https://github.com/user-attachments/assets/36a8ac24-8380-4a86-9d24-3df3006b58ce)
+
+-> Created backend, frontend, DB and RabbitMQ.<br>
+-> Backend will communicate with MongoDB and RabbitMQ.<br>
+-> DB will used for storing user details, order details etc.<br>
+-> RabbitMQ will be used for storing order status with asynchronous communication.<br>
+-> Users will access frontend using domain name and path.<br>
 
 <h2>Backend</h2>
 (1) Created deployment for backend in Node.js.<br>
@@ -42,17 +49,18 @@
 (7) Configured security context for non-root user access.<br>
 
 <h2>OPA/Gatekeeper</h2>
-(1) 
-
-
-
+(1) Implimented policies to prevent using :latest as the image tag for ensuring that only stable images are used.<br>
+(2) Implimented policies to enforce resource quota, limitng cpu, memory and otehr resources.<br>
+(3) Impliment policies to enforce liveness and readiness probe to enusre health, port check etc.<br>
 
 <h1>Phase 2</h1>
 
 <h2>Monitoring a Kubernetes Cluster using Prometheus and Grafana</h2>
 
--> 
--> 
+-> Used helm package manager to deploy prometheus and grafana.
+-> Deployed prometheus as daemonset to ensure running on all the nodes.<br>
+-> Deployed prometheus-alertmanager as statefulset.<br>
+-> Deployed grafana as deployment and exposed as nodeport service.<br>
 
 Steps:
 (1) kubectl create namespace monitoring<br>
