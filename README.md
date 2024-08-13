@@ -33,6 +33,15 @@
 (6) Configured terminationGracePeriodSeconds for smooth creation of pod after termination.<br>
 
 <h2>RabbitMQ</h2>
+(1) Created statefulset for rabbitmq.<br>
+(2) Configured headless-service for service discovery.<br>
+(3) Configured volumeClaimTemplate for data persistant.<br>
+(4) Configured init container to mount configmap to give container the read-write access of configmap.<br>
+(5) Created liveness and readiness probe for pod port check.<br>
+(6) Created service account and rbac for role based access and to have limited permission.<br>
+(7) Configured security context for non-root user access.<br>
+
+
 
 
 
