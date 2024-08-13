@@ -26,7 +26,7 @@
 <h2>Frontend</h2>
 (1) Created deployment for frontend for angular.<br>
 (2) Configured clusterip service for frontend deployment for interpod communication.<br>
-(3) Created HPA for backend depployment for autoscaling based on memory and cpu.<br>
+(3) Created HPA for frontend deployment for autoscaling based on memory and cpu.<br>
 (4) Configured resource and limits for resource management.<br>
 (5) Created secret for registry to authenticate the iamge pull.<br>
 (6) Created liveness and readiness probe for pod port check.<br>
