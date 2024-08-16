@@ -24,7 +24,7 @@
 (10) Configured resource and limits for resource management.<br>
 
 <h2>Frontend</h2>
-(1) Created deployment for frontend for angular.<br>
+(1) Created deployment for frontend for react.js.<br>
 (2) Configured clusterip service for frontend deployment for interpod communication.<br>
 (3) Created HPA for frontend deployment for autoscaling based on memory and cpu.<br>
 (4) Configured resource and limits for resource management.<br>
